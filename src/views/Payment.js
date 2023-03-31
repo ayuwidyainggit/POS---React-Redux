@@ -1,11 +1,6 @@
 import React from 'react';
 import NavbarLeft from '../components/NavbarLeft';
 import NavbarTop from '../components/NavbarTop';
-import Productlist from '../components/Productlist';
-import OrderList from '../components/OrderList';
-import CardProduct from '../components/CardProduct';
-import CategoryProduct from '../components/CategoryProduct';
-import CalculateBox from '../components/CalculateBox';
 import ListOrder from '../components/ListOrder';
 import PaymentAmount from '../components/PaymentAmount';
 

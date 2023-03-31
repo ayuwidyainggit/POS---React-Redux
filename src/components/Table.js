@@ -2,9 +2,6 @@ import React from 'react';
 import table from '../assets/content/table.png';
 
 const Table = ({ item }) => {
-  const addTable = (id) => {
-    console.log(id);
-  };
   return (
     <div>
       <div className="relative flex items-center">

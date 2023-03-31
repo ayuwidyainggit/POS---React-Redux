@@ -1,5 +1,4 @@
 import React from 'react';
-import cabe from '../assets/icon/cabe.png';
 import people from '../assets/icon/people.png';
 import table from '../assets/icon/small table icon.png';
 
