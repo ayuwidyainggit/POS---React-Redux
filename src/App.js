@@ -8,7 +8,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/POS---React-Redux" element={<Home />} />
         <Route path="/order" element={<Order />} />
         <Route path="/payment" element={<Payment />} />
       </Routes>
