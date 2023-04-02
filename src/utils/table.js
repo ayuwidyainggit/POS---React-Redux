@@ -1,3 +1,5 @@
+import ayam from '../assets/content/ayam.jpeg';
+
 export const table = [
   {
     id: 1,
@@ -19,7 +21,7 @@ export const table = [
     name: 'A3',
     guess: 4,
     floor: 1,
-    status: false,
+    status: true,
   },
   {
     id: 4,
@@ -87,5 +89,94 @@ export const table2 = [
     guess: 4,
     floor: 2,
     status: false,
+  },
+];
+
+export const product = [
+  {
+    id: 1,
+    img: { ayam },
+    name: 'chicken wings',
+    category: 'drinks',
+    category_code: 'D',
+    cabe: 3,
+  },
+  {
+    id: 2,
+    img: '../assets/content/ayam.jpeg',
+    name: 'chicken wings',
+    category: 'drinks',
+    category_code: 'D',
+    cabe: 2,
+  },
+  {
+    id: 3,
+    img: '../assets/content/ayam.jpeg',
+    name: 'nasi kucing',
+    category: 'drinks',
+    category_code: 'D',
+    cabe: 1,
+  },
+  {
+    id: 4,
+    img: '../assets/content/ayam.jpeg',
+    name: 'ayam penyet',
+    category: 'drinks',
+    category_code: 'D',
+    cabe: 0,
+  },
+];
+
+export const drinks = [
+  {
+    id: 1,
+    img: '../assets/content/ayam.jpeg',
+    name: 'es teh ',
+    category: 'drinks',
+    category_code: 'D',
+    cabe: 0,
+  },
+  {
+    id: 2,
+    img: '../assets/content/ayam.jpeg',
+    name: 'es degan  ',
+    category: 'drinks',
+    category_code: 'D',
+    cabe: 0,
+  },
+  {
+    id: 3,
+    img: '../assets/content/ayam.jpeg',
+    name: 'es coklat',
+    category: 'drinks',
+    category_code: 'D',
+    cabe: 0,
+  },
+];
+
+export const dessert = [
+  {
+    id: 1,
+    img: '../assets/content/ayam.jpeg',
+    name: 'dessert oreo',
+    category: 'drinks',
+    category_code: 'D',
+    cabe: 0,
+  },
+  {
+    id: 2,
+    img: '../assets/content/ayam.jpeg',
+    name: 'dessert strawberry',
+    category: 'drinks',
+    category_code: 'D',
+    cabe: 0,
+  },
+  {
+    id: 3,
+    img: '../assets/content/ayam.jpeg',
+    name: 'dessert blueberry',
+    category: 'drinks',
+    category_code: 'D',
+    cabe: 0,
   },
 ];
