@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/POS---React-Redux/static/css/main.33b7ae5c.css",
-    "main.js": "/POS---React-Redux/static/js/main.7ce63f79.js",
+    "main.css": "/POS---React-Redux/static/css/main.6188711a.css",
+    "main.js": "/POS---React-Redux/static/js/main.04fb0445.js",
     "static/js/787.97339a5d.chunk.js": "/POS---React-Redux/static/js/787.97339a5d.chunk.js",
     "static/media/ayam.jpeg": "/POS---React-Redux/static/media/ayam.021a787a26ae80385a71.jpeg",
     "index.html": "/POS---React-Redux/index.html",
-    "main.33b7ae5c.css.map": "/POS---React-Redux/static/css/main.33b7ae5c.css.map",
-    "main.7ce63f79.js.map": "/POS---React-Redux/static/js/main.7ce63f79.js.map",
+    "main.6188711a.css.map": "/POS---React-Redux/static/css/main.6188711a.css.map",
+    "main.04fb0445.js.map": "/POS---React-Redux/static/js/main.04fb0445.js.map",
     "787.97339a5d.chunk.js.map": "/POS---React-Redux/static/js/787.97339a5d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.33b7ae5c.css",
-    "static/js/main.7ce63f79.js"
+    "static/css/main.6188711a.css",
+    "static/js/main.04fb0445.js"
   ]
 }
