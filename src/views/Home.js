@@ -9,10 +9,12 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Productlist from '../components/Productlist';
 import CategoryProduct from '../components/CategoryProduct';
+import CardProduct from '../components/CardProduct';
 
 const Home = () => {
   const tables = useSelector((state) => state.table.table);
   const tables2 = useSelector((state) => state.table2.table2);
+  const carts = useSelector((state) => state.product.carts);
   const [guess, setGuess] = useState();
   const [idtable, setIdTable] = useState();
   const [namatable, setNamaTable] = useState();
@@ -22,7 +24,6 @@ const Home = () => {
   const [bookingTable, setBookingTable] = useState();
   const [chooseTable, setChooseTable] = useState(false);
 
-  const navigate = useNavigate();
   const { id } = useParams();
 
   const addTable = (name, guess, status) => {
@@ -135,6 +136,9 @@ const Home = () => {
           </div>
           <div className="w-[25%] ">
             <OrderList table={namatable} guess={guess} idTable={idtable} />
+            {carts.map((item) => (
+              <CardProduct key={item.id} name={item.name} price={item.price} />
+            ))}
           </div>
         </div>
       </div>

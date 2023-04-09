@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ayam from '../assets/content/ayam.jpeg';
+import cabe from '../assets/icon/cabe.png';
+import { useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
+import { addcart } from '../store/actions/product';
 
 const Food = () => {
+  const dispatch = useDispatch(0);
   const product = useSelector((state) => state.product.product);
+  const makanan = product.filter((product) => product.category_code === 'F');
+  const addToCart = (id) => {
+    console.log(id);
+    dispatch(addcart(id));
+  };
   return (
     <div>
       <div className="top-8 relative flex grid grid-cols-4 gap-4 pr-5 pl-5">
-        {product.map((product) => (
-          <div key={product.id} className="bg-[#D8E6E9] w-[180px] h-[200px] rounded-xl">
+        {makanan.map((product) => (
+          <div onClick={() => addToCart(product.id)} key={product.id} className="bg-[#D8E6E9] w-[180px] h-[200px] rounded-xl">
             <div>
               <img src={ayam} alt="" className="w-[180px] rounded-t-xl" />
             </div>
