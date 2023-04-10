@@ -101,6 +101,7 @@ export const product = [
     category_code: 'F',
     cabe: 3,
     price: 30000,
+    total: 30000,
   },
   {
     id: 2,
@@ -110,6 +111,7 @@ export const product = [
     category_code: 'F',
     cabe: 2,
     price: 20000,
+    total: 20000,
   },
   {
     id: 3,
@@ -119,6 +121,7 @@ export const product = [
     category_code: 'D',
     cabe: 0,
     price: 15000,
+    total: 15000,
   },
   {
     id: 4,
@@ -128,6 +131,7 @@ export const product = [
     category_code: 'D',
     cabe: 0,
     price: 50000,
+    total: 50000,
   },
   {
     id: 5,
@@ -137,6 +141,7 @@ export const product = [
     category_code: 'DS',
     cabe: 0,
     price: 50000,
+    total: 50000,
   },
   {
     id: 6,
@@ -146,14 +151,16 @@ export const product = [
     category_code: 'DS',
     cabe: 0,
     price: 50000,
+    total: 50000,
   },
   {
-    id: 1,
+    id: 7,
     img: { ayam },
     name: 'americano',
     category: 'drink',
     category_code: 'D',
     cabe: 3,
     price: 30000,
+    total: 30000,
   },
 ];

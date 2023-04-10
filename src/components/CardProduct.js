@@ -8,18 +8,21 @@ import { useDispatch } from 'react-redux';
 const CardProduct = (props) => {
   const [count, setCount] = useState(1);
   const dispatch = useDispatch();
-  const price = props.price;
-  const [total, setTotal] = useState(price);
+  // const price = props.price;
+  const [total, setTotal] = useState(props.price);
   const [serviceCharge, setServiceCharge] = useState(10000);
   const carts = useSelector((state) => state.product.carts);
-  const grandtotal = carts.reduce((totalPrice, current) => totalPrice + current.price, 0);
+  const grandtotal = carts.reduce((totalPrice, current) => totalPrice + current.total, 0);
+  console.log('grandtotal', grandtotal);
+  console.log('price', total);
 
   const increment = (id) => {
     const price = props.price;
     setCount(count + 1);
-    var x = price + count * price;
+    var x = total + price;
     setTotal(x);
     dispatch(inc(id));
+    console.log(dispatch(inc(id)));
   };
 
   const decrement = (id, price) => {
@@ -31,6 +34,7 @@ const CardProduct = (props) => {
       var x = total - price;
       setTotal(x);
       dispatch(dec(id));
+      console.log(dispatch(dec(id)));
     }
   };
 
@@ -44,11 +48,11 @@ const CardProduct = (props) => {
           <p>{props.name}</p>
           <p>Rp {props.price}</p>
           <div className="relative flex justify-left">
-            <button onClick={() => increment(props.price)} className="bg-[#D89F65] rounded-xl w-3 h-3 mt-2">
+            <button onClick={() => increment(props.id)} className="bg-[#D89F65] rounded-xl w-3 h-3 mt-2">
               <p className=" relative -top-2">+</p>
             </button>
             <p className="pl-2 pr-2">{count}</p>
-            <button onClick={() => decrement()} className="bg-[#D89F65] rounded-xl w-3 h-3 mt-2">
+            <button onClick={() => decrement(props.id)} className="bg-[#D89F65] rounded-xl w-3 h-3 mt-2">
               <p className=" relative -top-2">-</p>
             </button>
           </div>

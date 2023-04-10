@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const CalculateBox = (props) => {
   const [totalSemua, setTotalSemua] = useState();
   const total = props.total;
+
   const service = props.service;
 
   const grandTotal = () => {
     setTotalSemua(total + service);
-    console.log(totalSemua);
   };
+
+  useEffect(() => {
+    grandTotal();
+  }, [grandTotal]);
   return (
     <div>
       <div className=" w-[23%] fixed right-3 mt-[45%]  border-dashed border-2 border-sky-600 bottom-0 rounded-t-md bg-white">

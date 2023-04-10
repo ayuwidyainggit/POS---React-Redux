@@ -137,7 +137,7 @@ const Home = () => {
           <div className="w-[25%] ">
             <OrderList table={namatable} guess={guess} idTable={idtable} />
             {carts.map((item) => (
-              <CardProduct key={item.id} name={item.name} price={item.price} />
+              <CardProduct key={item.id} name={item.name} price={item.price} id={item.id} />
             ))}
           </div>
         </div>

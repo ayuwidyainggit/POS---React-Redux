@@ -25,11 +25,14 @@ const productReducer = (state = initialState, action) => {
       }
     case 'INCREMENT':
       const originalPrice = state.product.find((product) => product.id === payload).price;
+      const total = state.product.find((product) => product.id === payload).total;
+      console.log('originalPrice', originalPrice);
+      console.log('total', total);
       const incCarts = state.carts.map((product) => {
         if (product.id === payload) {
           return {
             ...product,
-            price: product.price + originalPrice,
+            total: product.total + originalPrice - originalPrice / 2,
           };
         } else {
           return product;
@@ -38,6 +41,23 @@ const productReducer = (state = initialState, action) => {
       return {
         ...state,
         carts: incCarts,
+      };
+
+    case 'DECREMENT':
+      const oriPrice = state.product.find((product) => product.id === payload).price;
+      const decCarts = state.carts.map((product) => {
+        if (product.id === payload) {
+          return {
+            ...product,
+            total: product.total - oriPrice + oriPrice / 2,
+          };
+        } else {
+          return product;
+        }
+      });
+      return {
+        ...state,
+        carts: decCarts,
       };
   }
 };
