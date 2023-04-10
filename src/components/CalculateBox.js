@@ -2,17 +2,26 @@ import React, { useEffect, useState } from 'react';
 
 const CalculateBox = (props) => {
   const [totalSemua, setTotalSemua] = useState();
+  const [serviceCharge, setServiceCharge] = useState(10000);
   const total = props.total;
 
-  const service = props.service;
+  // const service = props.service;
 
   const grandTotal = () => {
-    setTotalSemua(total + service);
+    setTotalSemua(total + serviceCharge);
+  };
+
+  const serviceFee = () => {
+    setServiceCharge((10 / 100) * total);
   };
 
   useEffect(() => {
     grandTotal();
   }, [grandTotal]);
+
+  useEffect(() => {
+    serviceFee();
+  }, [serviceFee]);
   return (
     <div>
       <div className=" w-[23%] fixed right-3 mt-[45%]  border-dashed border-2 border-sky-600 bottom-0 rounded-t-md bg-white">
@@ -22,7 +31,7 @@ const CalculateBox = (props) => {
         </div>
         <div className="relative flex justify-between border-b border-dotted border-sky-600">
           <p>Service Charge 10%</p>
-          <p>Rp {props.service}</p>
+          <p>Rp {serviceCharge}</p>
         </div>
         <div className="relative flex justify-between">
           <p>TOTAL</p>
