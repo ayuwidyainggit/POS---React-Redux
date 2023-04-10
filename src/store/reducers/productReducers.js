@@ -59,6 +59,12 @@ const productReducer = (state = initialState, action) => {
         ...state,
         carts: decCarts,
       };
+
+    case 'REMOVE':
+      return {
+        ...state,
+        carts: state.carts.filter((item) => item.id !== payload),
+      };
   }
 };
 

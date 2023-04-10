@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ayam from '../assets/content/ayam.jpeg';
 import CalculateBox from './CalculateBox';
 import { useSelector } from 'react-redux';
-import { inc, dec } from '../store/actions/product';
+import { inc, dec, removeFromCard } from '../store/actions/product';
 import { useDispatch } from 'react-redux';
 
 const CardProduct = (props) => {
@@ -27,7 +27,8 @@ const CardProduct = (props) => {
 
   const decrement = (id, price) => {
     if (count <= 1) {
-      alert('gabisa');
+      alert('anda yakin ingin meremove item ini?');
+      dispatch(removeFromCard(id));
     } else {
       const price = props.price;
       setCount(count - 1);

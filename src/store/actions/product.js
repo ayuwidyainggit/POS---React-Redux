@@ -18,3 +18,10 @@ export const dec = (id) => {
     payload: id,
   };
 };
+
+export const removeFromCard = (id) => {
+  return {
+    type: 'REMOVE',
+    payload: id,
+  };
+};
