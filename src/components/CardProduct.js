@@ -4,6 +4,7 @@ import CalculateBox from './CalculateBox';
 import { useSelector } from 'react-redux';
 import { inc, dec, removeFromCard } from '../store/actions/product';
 import { useDispatch } from 'react-redux';
+import remove from '../assets/icon/remove.png';
 
 const CardProduct = (props) => {
   const [count, setCount] = useState(1);
@@ -39,6 +40,11 @@ const CardProduct = (props) => {
     }
   };
 
+  const removeItem = (id) => {
+    alert('anda yakin ingin meremove item ini?');
+    dispatch(removeFromCard(id));
+  };
+
   return (
     <div>
       <div className="bg-[#EAF0F0] w-[90%]  relative flex left-[5%] rounded-md top-4 h-[84px] mb-3">
@@ -58,9 +64,12 @@ const CardProduct = (props) => {
             </button>
           </div>
         </div>
-        <div className="w-[30%] pt-1">
-          <p>Total Harga</p>
+        <div className="w-[20%] pt-1 pr-4">
+          <p>Total </p>
           <p>Rp{total}</p>
+        </div>
+        <div className="w-[10%] pt-1 pl-2">
+          <img onClick={() => removeItem(props.id)} src={remove} alt="" srcset="" />
         </div>
       </div>
 
