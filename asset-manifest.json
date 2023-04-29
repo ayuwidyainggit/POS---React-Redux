@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/POS---React-Redux/static/css/main.4e0d754c.css",
-    "main.js": "/POS---React-Redux/static/js/main.55cff239.js",
+    "main.js": "/POS---React-Redux/static/js/main.81da7b2b.js",
     "static/js/787.97339a5d.chunk.js": "/POS---React-Redux/static/js/787.97339a5d.chunk.js",
     "static/media/ayam.jpeg": "/POS---React-Redux/static/media/ayam.021a787a26ae80385a71.jpeg",
     "index.html": "/POS---React-Redux/index.html",
     "main.4e0d754c.css.map": "/POS---React-Redux/static/css/main.4e0d754c.css.map",
-    "main.55cff239.js.map": "/POS---React-Redux/static/js/main.55cff239.js.map",
+    "main.81da7b2b.js.map": "/POS---React-Redux/static/js/main.81da7b2b.js.map",
     "787.97339a5d.chunk.js.map": "/POS---React-Redux/static/js/787.97339a5d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4e0d754c.css",
-    "static/js/main.55cff239.js"
+    "static/js/main.81da7b2b.js"
   ]
 }
