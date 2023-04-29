@@ -25,3 +25,22 @@ export const removeFromCard = (id) => {
     payload: id,
   };
 };
+
+export const removeAllFromCard = (id) => {
+  return {
+    type: 'REMOVEALL',
+    payload: id,
+  };
+};
+
+export const resetCard = () => {
+  return {
+    type: 'RESET',
+  };
+};
+
+export const addOrder = () => {
+  return {
+    type: 'ADD_ORDER',
+  };
+};

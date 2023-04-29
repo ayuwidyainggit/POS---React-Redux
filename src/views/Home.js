@@ -107,9 +107,6 @@ const Home = () => {
               </div>
             )}
 
-            {/* <SelectTable table={namatable} guess={guess} /> */}
-            {/* gajadi karena blum tau cara ngirim data dr child ke parentnya */}
-
             {selectTable ? (
               <div></div>
             ) : (

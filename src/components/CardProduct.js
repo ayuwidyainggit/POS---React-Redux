@@ -9,9 +9,7 @@ import remove from '../assets/icon/remove.png';
 const CardProduct = (props) => {
   const [count, setCount] = useState(1);
   const dispatch = useDispatch();
-  // const price = props.price;
   const [total, setTotal] = useState(props.price);
-  // const [serviceCharge, setServiceCharge] = useState(10000);
   const carts = useSelector((state) => state.product.carts);
   const grandtotal = carts.reduce((totalPrice, current) => totalPrice + current.total, 0);
   console.log('grandtotal', grandtotal);
@@ -69,7 +67,7 @@ const CardProduct = (props) => {
           <p>Rp{total}</p>
         </div>
         <div className="w-[10%] pt-1 pl-2">
-          <img onClick={() => removeItem(props.id)} src={remove} alt="" srcset="" />
+          <img onClick={() => removeItem(props.id)} src={remove} alt="" />
         </div>
       </div>
 

@@ -3,6 +3,7 @@ import { product } from '../../utils/table';
 const initialState = {
   product: product,
   carts: [],
+  orders: [],
 };
 
 // buat function untuk reducernya
@@ -64,6 +65,13 @@ const productReducer = (state = initialState, action) => {
       return {
         ...state,
         carts: state.carts.filter((item) => item.id !== payload),
+      };
+    case 'REMOVEALL':
+      return {};
+    case 'RESET':
+      return {
+        ...state,
+        carts: [],
       };
   }
 };
